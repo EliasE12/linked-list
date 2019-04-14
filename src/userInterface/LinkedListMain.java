@@ -1,6 +1,5 @@
 package userInterface;
 
-
 import model.ComputerRoom;
 
 public class LinkedListMain {
@@ -16,8 +15,8 @@ public class LinkedListMain {
         computerRoom.addComputer(2000,4,"32.467.5456");
         computerRoom.addComputer(2500,32,"68.231.6895");
 
-        System.out.println("Number of computers");
-        System.out.println( "       # " + computerRoom.getNumberComputers());
+        System.out.println("\n-- Number of computers --");
+        System.out.println( "       #" + computerRoom.getNumberComputers());
 
         System.out.println("\n-- List in orden --\n");
         computerRoom.printList();

@@ -12,7 +12,7 @@ public class ComputerRoom {
 
 	public void printList() {
 		Computer current = first;
-		while (current.getNext() != null) {
+		while (current != null) {
 			System.out.println(current.getHd() + " " + current.getRam() + " " + current.getIp());
 			current = current.getNext();
 		}
@@ -32,21 +32,6 @@ public class ComputerRoom {
 		first = prev;
 	}
 
-	public void invertList2() {
-		Computer prev = null;
-		Computer current = first;
-		Computer next;
-		while (current != null){
-			prev = current.getPrev();
-			current.setPrev(current.getNext());
-			current.setNext(prev);
-			current = current.getPrev();
-		}
-		if (prev != null) {
-			first = prev.getPrev();
-		}
-	}
-
 	public void addComputer(int hd, int ram, String ip){
 		Computer newComputer = new Computer(hd,ram,ip);
 		if (first == null) {
@@ -63,6 +48,8 @@ public class ComputerRoom {
 	}
 
 	public void addInOrden(){}
+
+
 
 	public Computer getFirst() {
 		return first;
